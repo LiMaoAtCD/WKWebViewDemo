@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87E3BFF51A667BDC00C4EAC5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 87E3BFF31A667BDC00C4EAC5 /* index.html */; };
+		87E3BFF61A667BDC00C4EAC5 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 87E3BFF41A667BDC00C4EAC5 /* main.js */; };
 		87FF2EB41A666FF1004AFB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF2EB31A666FF1004AFB1F /* AppDelegate.swift */; };
 		87FF2EB61A666FF1004AFB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF2EB51A666FF1004AFB1F /* ViewController.swift */; };
 		87FF2EB91A666FF1004AFB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FF2EB71A666FF1004AFB1F /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87E3BFF31A667BDC00C4EAC5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		87E3BFF41A667BDC00C4EAC5 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		87FF2EAE1A666FF1004AFB1F /* WKWebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FF2EB21A666FF1004AFB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87FF2EB31A666FF1004AFB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		87FF2EA51A666FF1004AFB1F = {
 			isa = PBXGroup;
 			children = (
+				87E3BFF31A667BDC00C4EAC5 /* index.html */,
+				87E3BFF41A667BDC00C4EAC5 /* main.js */,
 				87FF2EB01A666FF1004AFB1F /* WKWebViewDemo */,
 				87FF2EC61A666FF1004AFB1F /* WKWebViewDemoTests */,
 				87FF2EAF1A666FF1004AFB1F /* Products */,
@@ -193,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87FF2EB91A666FF1004AFB1F /* Main.storyboard in Resources */,
+				87E3BFF51A667BDC00C4EAC5 /* index.html in Resources */,
 				87FF2EBE1A666FF1004AFB1F /* LaunchScreen.xib in Resources */,
 				87FF2EBB1A666FF1004AFB1F /* Images.xcassets in Resources */,
+				87E3BFF61A667BDC00C4EAC5 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				87FF2ECF1A666FF1004AFB1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87FF2ED01A666FF1004AFB1F /* Build configuration list for PBXNativeTarget "WKWebViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				87FF2ED21A666FF1004AFB1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
