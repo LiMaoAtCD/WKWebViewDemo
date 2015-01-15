@@ -17,6 +17,23 @@ class ViewController: UIViewController,WKScriptMessageHandler {
     override func loadView() {
         super.loadView()
         
+        var contentController = WKUserContentController()
+        
+        var userScript = WKUserScript(
+            source: "redHeader()", injectionTime: WKUserScriptInjectionTime.AtDocumentEnd, forMainFrameOnly: true)
+        
+        contentController.addScriptMessageHandler(self, name: "callbackHandler")
+        //        contentController.addUserScript(userScript2)
+        contentController.addUserScript(userScript)
+        
+        var config = WKWebViewConfiguration()
+        
+        config.userContentController = contentController
+        
+        self.webView = WKWebView(frame: self.view.bounds, configuration: config)
+        
+        self.view = self.webView
+
       
         
     }
@@ -24,20 +41,6 @@ class ViewController: UIViewController,WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var contentController = WKUserContentController()
-        
-        var userScript = WKUserScript(
-            source: "redHeader()", injectionTime: WKUserScriptInjectionTime.AtDocumentEnd, forMainFrameOnly: true)
-        
-        contentController.addUserScript(userScript)
-        
-        
-        var config = WKWebViewConfiguration()
-        
-        config.userContentController = contentController
-        
-        self.webView = WKWebView(frame: self.view.bounds, configuration: config)
-        self.view.addSubview(webView!)
         
         
 
@@ -51,12 +54,6 @@ class ViewController: UIViewController,WKScriptMessageHandler {
         
         self.webView!.loadRequest(req)
         
-//        var uiweb = UIWebView(frame: self.view.bounds)
-//        
-//        self.view.addSubview(uiweb)
-//        
-//        uiweb.loadRequest(req)
-        
         
    
     }
@@ -67,7 +64,9 @@ class ViewController: UIViewController,WKScriptMessageHandler {
     }
     
     func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage){
+        
         if(message.name == "callbackHandler") {
+            
             println("JavaScript is sending a message \(message.body)")
         }
         
